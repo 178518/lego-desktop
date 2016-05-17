@@ -1,0 +1,50 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lego</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/main.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/comm-list/comm-list.c7ee488f.css">
+    <style>
+        body{
+            height: 556px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+<div id="version"></div>
+<div class="layout-fixed" id="commList"></div>
+<script src="assets/libs/jquery-1.9.1.min.js"></script>
+<script src="assets/libs/jquery-ui-1.10.2.custom.min.js"></script>
+<script src="http://www.52pi.cc/static/js/??react.min.js,react-dom.min.js,zepto.min.js"></script>
+<script src="assets/js/comm-list/comm-list.1ab909df.js"></script>
+<script>
+    var isShowWindow = true;
+    //载入原生UI库
+    var gui = require('nw.gui');
+    var win = gui.Window.get();
+
+    //打开一个新窗体
+    //gui.Window.open('https://www.baidu.com');
+    var tray = new gui.Tray({icon: 'assets/img/koala.tiff'});
+
+    tray.tooltip = '点此打开';
+    //添加一个菜单
+    var menu = new gui.Menu();
+    menu.append(new gui.MenuItem({type: 'checkbox', label: '选择我'}));
+    tray.menu = menu;
+    //click事件
+    tray.on('click', function () {
+        if (isShowWindow) {
+            win.hide();
+            isShowWindow = false;
+        }else {
+            win.show();
+            isShowWindow = true;
+        }
+    });
+
+    $('#version').html("Node 版本:" + process.version);
+</script>
+</body>
+</html>

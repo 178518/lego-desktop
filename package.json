@@ -1,0 +1,39 @@
+{
+  "name": "Lego",
+  "main": "index.html",
+  "description": "Lego.",
+  "version": "1.0.0",
+  "maintainers":{
+    "name": "178518",
+    "email": "178518@gmail.com",
+    "web": "http://178518.github.io/book/",
+    "project": "https://github.com/178518/lego#readme",
+    "issues": "https://github.com/178518/lego/issues"
+  },
+  "contributors": [
+    {"name": "178518","web": "http://weibo.com/1940785567"}
+  ],
+  "window": {
+    "debug": true,
+    "icon": "app/assets/img/koala.png",
+    "icon-mac": "app/assets/img/koala.tiff",
+    "toolbar": true,
+    "width": 320,
+    "height": 480,
+    "resizable": false,
+    "position": "center",
+    "frame": true,
+    "show": true
+  },
+  "dependencies": {
+    "node-webkit": ">=0.5.1"
+  },
+  "licenses": [{
+    "type": "Apache 2.0",
+    "url": "http://www.apache.org/licenses/LICENSE-2.0"
+  }],
+  "repositories": [{
+    "type": "git",
+    "url": "https://github.com/178518/lego.git"
+  }]
+}
